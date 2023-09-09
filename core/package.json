@@ -1,0 +1,34 @@
+{
+  "name": "vite-plugin-console-info",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/esm/main.js",
+  "typings": "dist/esm/main.d.ts",
+  "scripts": {
+    "dev": "rollup -c rollup.config.js --watch && npm run build:types",
+    "build": "npm run build:types && rollup -c config/rollup.config.build.js",
+    "build:types": "tsc src/main.ts"
+  },
+  "dependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.6.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
